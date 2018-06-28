@@ -31,8 +31,10 @@ class SendMessageJob extends BaseObject implements JobInterface
         if (!$this->message instanceof MessageInterface) {
             throw new \InvalidArgumentException('Message must be an instance of ' . MessageInterface::class);
         }
+
         /** @var Mailer $mailer */
         $mailer = Instance::ensure($this->mailer, Mailer::class);
+
         return $mailer->getSyncMailer()->send($this->message);
     }
 }
