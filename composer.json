@@ -8,7 +8,7 @@
     "mailer",
     "queue"
   ],
-  "homepage": "http://packagist.org/packages/yarcode/yii2-queue-mailer",
+  "homepage": "https://packagist.org/packages/t-kanstantsin/yii2-queue-mailer",
   "license": "MIT",
   "authors": [
     {
