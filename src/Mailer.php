@@ -9,6 +9,7 @@ use yii\base\Component;
 use yii\base\InvalidConfigException;
 use yii\di\Instance;
 use yii\mail\BaseMailer;
+use yii\mail\BaseMessage;
 use yii\mail\MailerInterface;
 
 /**
@@ -77,7 +78,11 @@ class Mailer extends Component implements MailerInterface
      */
     public function compose($view = null, array $params = [])
     {
-        return $this->getSyncMailer()->compose($view, $params);
+        /** @var BaseMessage $message */
+        $message = $this->getSyncMailer()->compose($view, $params);
+        $message->mailer = $this;
+
+        return $message;
     }
 
     /**
