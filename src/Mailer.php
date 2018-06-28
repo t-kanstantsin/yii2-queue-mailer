@@ -78,9 +78,10 @@ class Mailer extends Component implements MailerInterface
      */
     public function compose($view = null, array $params = [])
     {
-        /** @var BaseMessage $message */
         $message = $this->getSyncMailer()->compose($view, $params);
-        $message->mailer = $this;
+        if ($message instanceof BaseMessage) {
+            $message->mailer = $this;
+        }
 
         return $message;
     }
