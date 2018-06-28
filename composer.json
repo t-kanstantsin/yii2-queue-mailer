@@ -1,5 +1,5 @@
 {
-  "name": "yarcode/yii2-queue-mailer",
+  "name": "t-kanstantsin/yii2-queue-mailer",
   "description": "Queue mailer decorator for Yii2 framework",
   "type": "yii2-extension",
   "keywords": [
@@ -17,6 +17,9 @@
       "role": "Developer"
     }
   ],
+  "replace": {
+    "yarcode/yii2-queue-mailer": "*"
+  },
   "support": {
     "issues": "https://github.com/yarcode/yii2-queue-mailer/issues",
     "source": "https://github.com/yarcode/yii2-queue-mailer"
